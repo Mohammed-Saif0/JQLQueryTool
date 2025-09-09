@@ -9,12 +9,6 @@ function copyToClipboard() {
     input.select();
     input.setSelectionRange(0, 99999); 
     navigator.clipboard.writeText(input.value)
-        .then(() => {
-            document.getElementById("copyMessage").innerText = "Copied!";
-        })
-        .catch(err => {
-            console.error("Failed to copy: ", err);
-        });
 }
 
 function getText(){
@@ -33,7 +27,7 @@ function getText(){
     }
     let displayElement = document.getElementById("display")
     let finalString = null
-    
+    console.log(set)
     for(let value of set) {
         if(finalString == null) finalString = ""
         else finalString += ","
@@ -41,7 +35,12 @@ function getText(){
     }
 
     if(finalString != null)
-    displayElement.innerText = "issue in (" + finalString + ")"
+    displayElement.value = "issue in (" + finalString + ")"
 }
 
 
+function clearBothTextAreas(){
+    document.getElementById("text").value = "";
+    document.getElementById("display").value = "";
+
+}
