@@ -9,6 +9,7 @@ function copyToClipboard() {
     input.select();
     input.setSelectionRange(0, 99999); 
     navigator.clipboard.writeText(input.value)
+    document.getElementById("successMessage").style.visibility = "visible"
 }
 
 function getText(){
@@ -42,5 +43,5 @@ function getText(){
 function clearBothTextAreas(){
     document.getElementById("text").value = "";
     document.getElementById("display").value = "";
-
+    document.getElementById("successMessage").style.visibility = "hidden"
 }
