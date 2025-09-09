@@ -6,9 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
      <style>
+      body{
+        padding: 20px;
+      }
+      h6{
+        margin-top: 10px;
+      }
     .scrollable-box {
-      width: 90vw;
-      height: 80vh;
+          width: 96vw;
+      height: 40vh;
       overflow: auto; /* Scroll when needed */
       border: 1px solid #ccc;
       padding: 10px;
@@ -22,9 +28,11 @@
   <textarea class="form-control" id="text" rows="3"></textarea>
 </div>
  
-    <button onclick="getText()"> Submit </button>
+    <button onclick="getText()" type="button" class="btn btn-primary">Submit</button>
 
-    <button onclick="copyToClipboard()">Copy to the clipboard</button>
+    <button type="button" onclick="copyToClipboard()" class="btn btn-success">Copy to the clipboard</button>
+    <button type="button" onclick="clearBothTextAreas()" class="btn btn-warning">Clear</button>
+    <h6>OUTPUT</h6>
      <textarea class="scrollable-box" id = "display"> </textarea>
 
   </div>
