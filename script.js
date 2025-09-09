@@ -23,7 +23,7 @@ function getText(){
     let i = 0, j = 0
     let set = new Set();
     while(i < text.length && j < text.length){
-        while(i < text.length && text.substring(i,i+4) != "MET-") i += 4;
+        while(i < text.length && text.substring(i,i+4) != "MET-") i += 1;
         j = i + 4;
         if(i > text.length || j > text.length) break;
         while(j <text.length && (text[j] != " " && isOnlyNumbers(text[j]))) ++j;
@@ -43,4 +43,5 @@ function getText(){
     if(finalString != null)
     displayElement.innerText = "issue in (" + finalString + ")"
 }
+
 
